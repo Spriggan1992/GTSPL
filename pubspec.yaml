@@ -1,0 +1,26 @@
+name: gtspl
+description: Gainscha Android Bluetooth/Ethernet/USB.
+version: 0.0.1
+homepage: https://github.com/unger1984
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: pro.unger1984.gtspl
+        pluginClass: GtsplPlugin
+
