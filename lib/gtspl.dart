@@ -27,7 +27,7 @@ class Gtspl {
     return channel.status();
   }
 
-  Future<bool> sendCommand(String command) {
+  Future<bool> sendCommand(String command, int amount) {
     return channel.sendCommand(command);
   }
 
