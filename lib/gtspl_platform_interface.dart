@@ -33,7 +33,7 @@ abstract class GtsplPlatform extends PlatformInterface {
 
   Future<String> status();
 
-  Future<bool> sendCommand(String command);
+  Future<bool> sendCommand(String command, int amount);
 
   Future<bool> sendCommandAndFile(String command, String filepath);
 }
