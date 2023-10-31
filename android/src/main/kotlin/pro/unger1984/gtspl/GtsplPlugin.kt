@@ -62,7 +62,7 @@ class GtsplPlugin: FlutterPlugin, MethodCallHandler {
         val amount = arguments["amount"] as Int?
         if (arguments.containsKey("command")) {
 
-          amount?.let { mGtsplWIFICmdTest.GTSPL_printLabel(it, 1, context) }
+          amount?.let { mGtsplWIFICmdTest.GTSPL_printLabel(2, 3, context) }
           val res = mGtsplWIFICmdTest.sendToPrinter(arguments["command"] as String);
           result.success(res);
         }else {
