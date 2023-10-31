@@ -59,11 +59,9 @@ class GtsplPlugin: FlutterPlugin, MethodCallHandler {
 
       "send_command" -> {
         val arguments = call.arguments as HashMap<*,*>
-        val amount = arguments["amount"] as Int?
         if (arguments.containsKey("command")) {
-
-          amount?.let { mGtsplWIFICmdTest.GTSPL_printLabel(2, 3, context) }
-          val res = mGtsplWIFICmdTest.sendToPrinter(arguments["command"] as String);
+           mGtsplWIFICmdTest.GTSPL_printLabel(2, 3, context)
+          val res = mGtsplWIFICmdTest.sendToPrinter("QTY 3\n" + arguments["command"] as String);
           result.success(res);
         }else {
           result.error("invalid_argument", "argument 'command' not found", null)
