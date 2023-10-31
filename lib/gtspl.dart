@@ -27,8 +27,8 @@ class Gtspl {
     return channel.status();
   }
 
-  Future<bool> sendCommand(String command, int amount) {
-    return channel.sendCommand(command, amount);
+  Future<bool> sendCommand(String command) {
+    return channel.sendCommand(command);
   }
 
   Future<bool> sendCommandAndFile(String command, String filepath) {

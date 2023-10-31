@@ -34,9 +34,9 @@ class MethodChannelGtspl extends GtsplPlatform {
   }
 
   @override
-  Future<bool> sendCommand(String command, int amount) async {
+  Future<bool> sendCommand(String command) async {
     return await methodChannel
-        .invokeMethod("send_command", {"command": command, amount: amount});
+        .invokeMethod("send_command", {"command": command});
   }
 
   @override
